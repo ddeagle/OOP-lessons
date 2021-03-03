@@ -27,7 +27,7 @@ public:
 };
 
 
-//Если будет желание ввести числа ручками
+//hand initialize if wanted
 int set()
 {
 	std::cout << "Enter an integer: ";
