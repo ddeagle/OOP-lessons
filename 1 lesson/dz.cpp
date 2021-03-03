@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdint>
 #include <cmath>
+#include <cassert>
 
 //1
 class Power
@@ -66,51 +67,90 @@ public:
 };
 
 //3
-class Stack
-{
-private:
-	int m_array[10];
-	int m_arraysize;
-public:
-	
-	Stack();
-	~Stack();
-
-	void reset()
-	{
-	}
-
-	void push()
-	{
-	}
-
-	void pop()
-	{
-	}
-	
-	void print_array()
-	{}
-
-};
-
-Stack::Stack()
-{
-}
-
-Stack::~Stack()
-{
-}
-
-
+//class Stack
+//{
+//private:
+//	int* m_array;
+//	int m_arraysize;
+//public:
+//	Stack()
+//	{
+//	}
+//	Stack(int lenght)
+//	{
+//		assert(lenght > 0);
+//		m_arraysize = lenght;
+//		m_array = new int[m_arraysize];
+//	}
+//
+//	~Stack(int lenght);
+//	{
+//		delete[] m_array;
+//	}
+//
+//	void reset()
+//	{
+//		int array[10];
+//		std::fill(&m_array[0], &m_array[10], 0);
+//	}
+//
+//	void push()
+//	{
+//	}
+//
+//	void pop()
+//	{
+//	}
+//	
+//	void print_array()
+//	{
+//		for (int lenght = 0; lenght < 10; ++i)
+//		std::cout << *pointer++ << endl;
+//	}
+//	void setValue
+//	{
+//		assert(index < m_arraysize);
+//		m_array[index] = value;
+//	}
+//
+//	int getValue(int index)
+//	{ 
+//		assert(index < m_arraysize);
+//		return m_array[index]; 
+//	}
+//};
 
 int main()
 {
+	//1
 	Power one(2, 3);
 	one.print_1();
 	one.calculate();
+	//2
+//	RGBA test;
+//	test.print();
+//	RGBA test2(1,1,1,1);
+//	test2.print();
+//	//3
+//	Stack stack;
+//	stack.reset();
+//	stack.print_array();
+//
+//	stack.push(3);
+//	stack.push(7);
+//	stack.push(5);
+//	stack.print_array();
+//
+//	stack.pop();
+//	stack.print_array();
+//
+//	stack.pop();
+//	stack.pop();
+//	stack.print_array();
 
 
 
 
 	return 0;
 }
+
