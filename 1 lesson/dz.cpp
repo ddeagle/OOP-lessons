@@ -10,6 +10,12 @@ private:
 	double m_a;
 	double m_b;
 public:
+	Power()
+	{
+		m_a = 0;
+		m_b = 0;
+	}
+
 	Power(double a, double b) : m_a(a), m_b(b)
 	{
 	}
@@ -25,30 +31,46 @@ public:
 		std::cout << "a degree b is " << pow(m_a, m_b) << std::endl;;
 	};
 
+
+	void set(double number1,double number2)
+	{
+		m_a = number1;
+		m_b = number2;
+	}
+	int get()
+	{
+		return m_a;
+		return m_b;
+	}
+
 };
 
 
 //hand initialize if wanted
-int set()
-{
-	std::cout << "Enter an integer: ";
-	int x;
-	std::cin >> x;
-	return x;
-	std::cout << "your integer is = " << x << std::endl;
-}
+//int set()
+//{
+//	std::cout << "Enter an integer: ";
+//	int x ;
+//	std::cin >> x;
+//	return x;
+//	std::cout << "your integer is = " << x << std::endl;
+//}
 
 //2
 class RGBA
 {
 private:
-	std::int8_t m_red = 0;
-	std::int8_t m_green = 0;
-	std::int8_t m_blue = 0;
-	std::int8_t m_alpha = 255;
+	std::int8_t m_red;
+	std::int8_t m_green;
+	std::int8_t m_blue;
+	std::int8_t m_alpha;
 public:
 	RGBA()
 	{
+		std::int8_t m_red = 0;
+		std::int8_t m_green = 0;
+		std::int8_t m_blue = 0;
+		std::int8_t m_alpha = 255;
 	}
 
 	RGBA(int8_t color1, int8_t color2, int8_t color3, int8_t color4)
@@ -126,6 +148,10 @@ int main()
 	Power one(2, 3);
 	one.print_1();
 	one.calculate();
+//	Power two(double a,double b);
+//	two.set(1, 2);
+//	two.calculate();
+	
 	//2
 	RGBA test;
 	test.print();
