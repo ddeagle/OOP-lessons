@@ -127,10 +127,10 @@ int main()
 	one.print_1();
 	one.calculate();
 	//2
-//	RGBA test;
-//	test.print();
-//	RGBA test2(1,1,1,1);
-//	test2.print();
+	RGBA test;
+	test.print();
+	RGBA test2(1,1,1,1);
+	test2.print();
 //	//3
 //	Stack stack;
 //	stack.reset();
