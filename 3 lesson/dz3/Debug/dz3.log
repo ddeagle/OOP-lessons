@@ -1,0 +1,4 @@
+﻿  Source.cpp
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(28,2): error C2512: Figure: нет подходящего конструктора по умолчанию
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(7,7): message : см. объявление "Figure"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(40,10): error C2065: area: необъявленный идентификатор
