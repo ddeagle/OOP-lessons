@@ -46,23 +46,36 @@ protected:
 	std::string m_name;
 	std::string m_color;
 public:
+	Fruit(std::string name = "" , std::string color = ""): m_name(name),m_color(color)
+	{}
+
+	std::string getName() const { return m_name; }
+	
+	std::string getColor() const { return m_color; }
 
 };
 
 class Apple : public Fruit
 {
-
+public:
+	Apple(std::string name = "Apple", std::string color = "red")
+	{}
 
 };
 
 class Banana : public Fruit
 {
+public:
+	Banana(std::string name = "Banana", std::string color = "yellow")
+	{}
 
 };
 
 class GrannySmith : public Apple
 {
-
+public:
+	GrannySmith(std::string name = "", std::string color = "green")
+	{}
 };
 
 
@@ -73,11 +86,18 @@ int main()
 	//1
 	Person person1("Bob", 20, 0, 80);
 	person1.print();
-	Student student1("Kevin", 20, 0, 75, 2);
+	Student student1("Kevin", 19, 0, 75, 1);
 	student1.print();
 	student1.print_student();
 
 	//2 
+	Apple a("red");
+	Banana b;
+	GrannySmith c;
+
+	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
+	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
+	std::cout << "My " << c.getName() << " is " << c.getColor() << ".\n";
 
 
 	return 0;
