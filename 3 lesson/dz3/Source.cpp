@@ -11,11 +11,13 @@ protected:
 public:
 	Figure(int area) : m_area(area)
 	{}
+
+
 	virtual int Getarea() { return m_area; }
 	
 	void show_area()
 	{
-		cout << m_area << endl;
+		cout << "area is " << m_area << endl;
 	}
 };
 
@@ -25,10 +27,11 @@ protected:
 	int m_a;
 	int m_b;
 public:
-	Parallelogram(int a,int b) : m_a(a),m_b(b)
+	Parallelogram(int a,int b,int area) : m_a(a),m_b(b),Figure(area)
 	{}
-	int GetArea() 
-	{}
+	int Getarea() 
+	{
+	}
 };
 
 class Rectangle : public Parallelogram
@@ -38,87 +41,72 @@ public:
 	{}
 	int getarea() 
 	{
-		return int a * int b;
 	}
 
 };
 
 
-
-
-
-
-void writeArea(Figure& someParallelogram)
-{
-	cout << "area is " << someParallelogram.Getarea() << '\n'; 
-}
-
-
-
-
-
 //2
-//class Car
-//{
-//protected:
-//	string m_company;
-//	string m_model;
-//public:
-//	virtual ~Car()
-//	{};
-//	Car(string model,string company) :m_model(model),m_company(company)
-//	{ 
-//		cout << "car model" << model << endl;
-//	}
-//	virtual string getModel() {
-//		return m_model;
-//	}
-//	virtual	string getCompany() { return m_company;}
-//};
-//
-//class PassengerCar :public Car
-//{
-//	public:
-//		PassengerCar()
-//		
-//
-//
-//};
-//
-//class Bus :public Car
-//{
-//public:
-//	Bus()
-//
-//
-//
-//};
-//
+class Car
+{
+protected:
+	string m_company;
+	string m_model;
+public:
+	virtual ~Car()
+	{}
+
+	Car(string model,string company) :m_model(model),m_company(company)
+	{ 
+		cout << "car model" << model << endl;
+	}
+	virtual string getModel() 
+	{
+		return m_model;
+	}
+	virtual	string getCompany() { return m_company;}
+};
+
+class PassengerCar :public Car
+{
+	public:
+		PassengerCar(string model,string company) : Car(model, company)
+		{}
+		
+};
+
+class Bus :public Car
+{
+public:
+	Bus(string model, string company) : Car(model, company)
+	{}
+};
+
 //class Minivan : public PassengerCar , public Bus
 //{
 //public:
-//
-//
+//	Minivan(string model, string company) : PassengerCar(model, company)
+//	
 //};
 
 
 //3
-class card
-{
-protected:
-	enum m_cardsuit {};
-	enum m_cardvalue {};
-	bool m_cardposition;
-public:
-	card (bool cardposition) : m_cardposition(cardposition)
-	
-};
+//class card
+//{
+//protected:
+//	enum m_cardsuit {};
+//	enum m_cardvalue {};
+//	bool m_cardposition;
+//public:
+//	card (bool cardposition) : m_cardposition(cardposition)
+//	
+//};
 
 int main()
 {
 	Parallelogram test(1,2);
-	test.GetArea();
-	test.show_area;
+	test.Getarea();
+	test.show_area();
 
 
 };

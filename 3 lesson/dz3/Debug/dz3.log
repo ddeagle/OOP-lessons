@@ -1,6 +1,2 @@
 ﻿  Source.cpp
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(28,2): error C2512: Figure: нет подходящего конструктора по умолчанию
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(7,7): message : см. объявление "Figure"
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(40,10): error C2062: тип "int" не требуется
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(114,2): error C2969: синтаксическая ошибка: ;: требуется определение функции-члена до "}"
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(124,1): fatal error C1004: непредвиденное обнаружение конца файла
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(36): error C4716: Parallelogram::Getarea: должна возвращать значение
