@@ -1,5 +1,5 @@
 ﻿  dz.cpp
-I:\docs\GitHub\oop\OOP-lessons\1 lesson\dz.cpp(42,10): warning C4244: return: преобразование "double" в "int", возможна потеря данных
 I:\docs\GitHub\oop\OOP-lessons\1 lesson\dz.cpp(43,10): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-I:\docs\GitHub\oop\OOP-lessons\1 lesson\dz.cpp(73,25): warning C4309: инициализация: усечение константного значения
+I:\docs\GitHub\oop\OOP-lessons\1 lesson\dz.cpp(44,10): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+I:\docs\GitHub\oop\OOP-lessons\1 lesson\dz.cpp(74,25): warning C4309: инициализация: усечение константного значения
   Project1.vcxproj -> I:\docs\GitHub\oop\OOP-lessons\1 lesson\Project1\Debug\Project1.exe

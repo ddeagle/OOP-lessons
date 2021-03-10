@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <cmath>
 #include <cassert>
+#include <typeinfo>
 
 //1
 class Power
@@ -80,13 +81,33 @@ public:
 	
 	void print()
 	{
-		std::cout << "first color is " << m_red << std::endl;
-		std::cout << "second color is " << m_green << std::endl;
-		std::cout << "third color is " << m_blue << std::endl;
-		std::cout << "alpha color is " << m_alpha << std::endl;
+		std::cout << "first color is " << unsigned(m_red) << std::endl;
+		std::cout << "second color is " << unsigned(m_green) << std::endl;
+		std::cout << "third color is " << unsigned(m_blue) << std::endl;
+		std::cout << "alpha color is " << unsigned(m_alpha) << std::endl;
 	}
 
 };
+
+
+//for print unsigned characters
+namespace numerical_chars {
+	inline std::ostream& operator<<(std::ostream& os, char c) {
+		return std::is_signed<char>::value ? os << static_cast<int>(c)
+			: os << static_cast<unsigned int>(c);
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, signed char c) {
+		return os << static_cast<int>(c);
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, unsigned char c) {
+		return os << static_cast<unsigned int>(c);
+	}
+}
+
+
+
 
 //3
 //class Stack
@@ -142,6 +163,10 @@ public:
 //	}
 //};
 
+
+
+
+
 int main()
 {
 	//1
@@ -157,6 +182,9 @@ int main()
 	test.print();
 	RGBA test2(1,1,1,1);
 	test2.print();
+
+
+
 //	//3
 //	Stack stack;
 //	stack.reset();
