@@ -77,7 +77,7 @@ public:
 class GrannySmith : public Apple
 {
 public:
-	GrannySmith(std::string name = "GrannySmith", std::string color = "green") : Apple(name, color)
+	GrannySmith(std::string name = "GrannySmith apple", std::string color = "green") : Apple(name, color)
 	{}
 };
 
