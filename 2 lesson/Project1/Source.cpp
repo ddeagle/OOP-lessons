@@ -42,31 +42,34 @@ public:
 //2
 class Fruit
 {
-protected:
+private:
 	std::string m_name;
 	std::string m_color;
 public:
-	Fruit(std::string name = "" , std::string color = ""): m_name(name),m_color(color)
+	Fruit(std::string &name , std::string &color): m_name(name),m_color(color)
 	{}
 
 	std::string getName() const { return m_name; }
 	
 	std::string getColor() const { return m_color; }
 
+
+
 };
 
 class Apple : public Fruit
 {
 public:
-	Apple(std::string name = "Apple", std::string color = "red")
+	Apple(std::string name = "Apple", std::string color = "red") : Fruit (name,color)
 	{}
+	
 
 };
 
 class Banana : public Fruit
 {
 public:
-	Banana(std::string name = "Banana", std::string color = "yellow")
+	Banana(std::string name = "Banana", std::string color = "yellow") : Fruit(name, color)
 	{}
 
 };
@@ -74,7 +77,7 @@ public:
 class GrannySmith : public Apple
 {
 public:
-	GrannySmith(std::string name = "", std::string color = "green")
+	GrannySmith(std::string name = "GrannySmith", std::string color = "green") : Apple(name, color)
 	{}
 };
 

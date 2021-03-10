@@ -12,6 +12,7 @@ public:
 	Figure(int area) : m_area(area)
 	{}
 	virtual int Getarea() { return m_area; }
+	
 	void show_area()
 	{
 		cout << m_area << endl;
@@ -35,12 +36,17 @@ class Rectangle : public Parallelogram
 public:
 	Rectangle(int a, int b) : Parallelogram(a, b)
 	{}
-	int getarea()
+	int getarea() 
 	{
-		return area;
+		return int a * int b;
 	}
 
 };
+
+
+
+
+
 
 void writeArea(Figure& someParallelogram)
 {
