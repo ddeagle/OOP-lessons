@@ -6,45 +6,31 @@ using namespace std;
 //1
 class Figure
 {
-protected:
-	double m_area;
 public:
 	virtual double area() const = 0;
 
 	virtual ~Figure()
 	{}
-
-	virtual int Getarea() { return area; }
 	
 	void show_area()
 	{
 		cout << "area is " << m_area << endl;
 	}
+
 };
 
-class Parallelogram : public Figure
+class Rectangle : public Figure
 {
-protected:
+private:
 	int m_a;
 	int m_b;
 public:
-	Parallelogram(int a,int b,int area) : m_a(a),m_b(b),Figure(area)
-	{}
-	int Getarea() 
-	{
+	Rectangle(int a,int b,int area) : m_a(a), m_b(b) {}
+	double area() const override {
+		return m_a*m_b;
 	}
 };
 
-class Rectangle : public Parallelogram
-{
-public:
-	Rectangle(int a, int b) : Parallelogram(a, b)
-	{}
-	int getarea() 
-	{
-	}
-
-};
 
 
 //2
