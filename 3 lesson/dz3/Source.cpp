@@ -7,13 +7,14 @@ using namespace std;
 class Figure
 {
 protected:
-	int m_area;
+	double m_area;
 public:
-	Figure(int area) : m_area(area)
+	virtual double area() const = 0;
+
+	virtual ~Figure()
 	{}
 
-
-	virtual int Getarea() { return m_area; }
+	virtual int Getarea() { return area; }
 	
 	void show_area()
 	{
