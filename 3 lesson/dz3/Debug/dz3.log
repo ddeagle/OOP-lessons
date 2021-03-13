@@ -1,3 +1,5 @@
 ﻿  Source.cpp
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(19,1): error C3867: "Figure::area": нестандартный синтаксис; используйте "&", чтобы создать указатель на член
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(19,1): fatal error C1903: не удается восстановить после предыдущих ошибок; остановка компиляции
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(65,16): error C2664: "Parallelogram::Parallelogram(Parallelogram &&)": невозможно преобразовать аргумент 1 из "int" в "const Parallelogram &"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(65,16): message : Причина: невозможно преобразовать "int" в "const Parallelogram"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(65,16): message : Ни один конструктор не смог принять исходный тип, либо разрешение перегрузки конструктора неоднозначно
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(28,1): message : см. объявление "Parallelogram::Parallelogram"

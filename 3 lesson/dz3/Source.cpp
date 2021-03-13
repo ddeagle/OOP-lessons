@@ -9,31 +9,66 @@ class Figure
 public:
 	virtual double area() const = 0;
 
-	virtual ~Figure()
-	{
-		cout << "destructor for Figure" << endl;
-	}
+	virtual ~Figure(){}
 	
-	void print()
+	void print() 
 	{
-		cout << "area is " << area << endl;
+		cout << "area is " << area() << endl;
 	}
-
 };
 
-class Rectangle : public Figure
+class Parallelogram : public Figure
 {
-private:
+protected:
 	int m_a;
 	int m_b;
 public:
-	Rectangle(int a,int b) : m_a(a), m_b(b) {}
-	
-	double area() const override {
-		return m_a*m_b;
-	}
+	Parallelogram(){}
+	Parallelogram(int a, int b) : m_a(a), m_b(b){}
+};
+
+class Circle : public Figure
+{
+private:
+	int m_a;
+public:
+	Circle(int a) : m_a(a) {}
 
 };
+
+class Rectangle : public Parallelogram
+{
+
+public:
+	Rectangle(int a, int b) : Parallelogram(m_a, m_b) {}
+	
+	double area() const override {
+		return m_a * m_b;
+	}
+};
+
+class Romb : public Parallelogram
+{
+
+public:
+	Romb(int a, int b) : Parallelogram(m_a, m_b) {}
+
+	double area() const override {
+		return m_a * m_b;
+	}
+};
+
+class Square : public Parallelogram
+{
+
+public:
+	Square(int a) : Parallelogram(m_a) {}
+
+	double area() const override {
+		return m_a * m_a;
+	}
+};
+
 
 
 
@@ -44,8 +79,7 @@ protected:
 	string m_company;
 	string m_model;
 public:
-	virtual ~Car()
-	{}
+	virtual ~Car(){}
 
 	Car(string model,string company) :m_model(model),m_company(company)
 	{ 
@@ -55,7 +89,10 @@ public:
 	{
 		return m_model;
 	}
-	virtual	string getCompany() { return m_company;}
+	virtual	string getCompany() 
+	{ 
+		return m_company;
+	}
 };
 
 class PassengerCar :public Car
@@ -95,8 +132,10 @@ public:
 
 int main()
 {
-	Rectangle test(1,2);
+	Rectangle test(2,2);
+	test.print();
 	test.area();
 	test.print();
+
 
 };
