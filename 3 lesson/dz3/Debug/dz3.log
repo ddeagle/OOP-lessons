@@ -1,2 +1,3 @@
 ﻿  Source.cpp
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(36): error C4716: Parallelogram::Getarea: должна возвращать значение
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(19,1): error C3867: "Figure::area": нестандартный синтаксис; используйте "&", чтобы создать указатель на член
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(19,1): fatal error C1903: не удается восстановить после предыдущих ошибок; остановка компиляции

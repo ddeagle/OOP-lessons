@@ -6,20 +6,17 @@ class Person
 {
 protected:
 	std::string m_name;
+	std::string m_gender;
 	int m_age;
-	bool m_gender;
 	int m_weight;
 public:
-	Person(std::string name, int age, bool gender, int weight) :m_name(name), m_age(age), m_gender(gender), m_weight(weight)
-	{
-		// swap 0 in gender with male/female ??
-	}
-
-	void print()
-	{
-		std::cout << m_name << " is " << m_age << " year's " << m_gender << " " << m_weight << "kg" << std::endl;
-	}
-
+	Person(const std::string& name, const std::string& gender, int age, int weight);
+	
+	void SetName(const std::string& name) { m_name = name; }
+	void SetGender(const std::string& gender) { m_gender = gender; }
+	void SetAge(int age) { m_age = age; }
+	void SetWeight(int weight) { m_weight = weight; }
+	void PrintPerson();
 };
 
 
@@ -28,57 +25,89 @@ class Student : public Person
 {
 protected:
 	int m_StudyYears;
+	static int studentCount;
 public:
-	Student(std::string name, int age, bool gender, int weight,int StudyYears) 
-		: Person(name, age, gender,weight) , m_StudyYears(StudyYears)
-	{}
-	void print_student()
-	{
-		std::cout << m_name << " is studing for " << m_StudyYears << " year's " << std::endl;
+	Student(const std::string& name, const std::string& gender, int age, int weight, int yearOfStudy)
+		: Person(name, gender, age, weight), m_StudyYears(yearOfStudy) {
+		studentCount++;
 	}
+	void SetYear(int yearOfStudy) { m_StudyYears = yearOfStudy; }
+	void PrintNumberStudent();
+	void PrintStudent();
 };
+
+int Student::studentCount = 0;
+
+void Person::PrintPerson()
+	{
+		std::cout << "Name: " << m_name << "\nGender: " << m_gender << "\nAge: " << m_age << "\nWeight: " << m_weight << std::endl;
+	}
+
+void Student::PrintStudent()
+	{
+		PrintPerson();
+		std::cout << "Year of study: " << m_StudyYears << "\n" << std::endl;
+	}
+
+void Student::PrintNumberStudent()
+	{
+		std::cout << "Number of students: " << studentCount << "\n" << std::endl;
+	}
+
+
+
+Person::Person(const std::string& name, const std::string& gender, int age, int weight)
+{
+	m_name = name;
+	m_gender = gender;
+	m_age = age;
+	m_weight = weight;
+}
 
 
 //2
 class Fruit
 {
-private:
+protected:
 	std::string m_name;
 	std::string m_color;
-public:
-	Fruit(std::string &name , std::string &color): m_name(name),m_color(color)
-	{}
-
-	std::string getName() const { return m_name; }
-	
-	std::string getColor() const { return m_color; }
-
-
-
 };
 
 class Apple : public Fruit
 {
 public:
-	Apple(std::string name = "Apple", std::string color = "red") : Fruit (name,color)
-	{}
-	
-
+	Apple() {}
+	Apple(const std::string& color) 
+	{
+		m_color = color;
+		m_name = "Apple";
+	}
+	std::string getName() const { return m_name; }
+	std::string getColor() const { return m_color; }
 };
 
 class Banana : public Fruit
 {
 public:
-	Banana(std::string name = "Banana", std::string color = "yellow") : Fruit(name, color)
-	{}
-
+	Banana()
+	{
+		m_color = "yellow";
+		m_name = "Banana";
+	}
+	std::string getName() const { return m_name; }
+	std::string getColor() const { return m_color; }
 };
 
 class GrannySmith : public Apple
 {
 public:
-	GrannySmith(std::string name = "GrannySmith apple", std::string color = "green") : Apple(name, color)
-	{}
+	GrannySmith()
+	{
+		m_color = "green";
+		m_name = "GrannySmith";
+	}
+	std::string getName() const { return m_name; }
+	std::string getColor() const { return m_color; }
 };
 
 
@@ -87,17 +116,24 @@ public:
 int main()
 {
 	//1
-	Person person1("Bob", 20, 0, 80);
-	person1.print();
-	Student student1("Kevin", 19, 0, 75, 1);
-	student1.print();
-	student1.print_student();
+	std::cout << "//First Task " << ".\n";
+	Student student1("Ivan", "Male", 20, 60, 2015);
+	student1.PrintStudent();
+	student1.PrintNumberStudent();
+	Student student2("Elena", "Female", 25, 45, 2010);
+	student2.PrintStudent();
+	student2.PrintNumberStudent();
+	Student student3("Vasilisa", "Female", 19, 70, 2011);
+	student2.PrintStudent();
+	student2.PrintNumberStudent();
+
 
 	//2 
 	Apple a("red");
 	Banana b;
 	GrannySmith c;
 
+	std::cout << "//Second Task "  << ".\n";
 	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
 	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
 	std::cout << "My " << c.getName() << " is " << c.getColor() << ".\n";

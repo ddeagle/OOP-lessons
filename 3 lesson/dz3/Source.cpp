@@ -10,11 +10,13 @@ public:
 	virtual double area() const = 0;
 
 	virtual ~Figure()
-	{}
-	
-	void show_area()
 	{
-		cout << "area is " << m_area << endl;
+		cout << "destructor for Figure" << endl;
+	}
+	
+	void print()
+	{
+		cout << "area is " << area << endl;
 	}
 
 };
@@ -25,10 +27,12 @@ private:
 	int m_a;
 	int m_b;
 public:
-	Rectangle(int a,int b,int area) : m_a(a), m_b(b) {}
+	Rectangle(int a,int b) : m_a(a), m_b(b) {}
+	
 	double area() const override {
 		return m_a*m_b;
 	}
+
 };
 
 
@@ -91,9 +95,8 @@ public:
 
 int main()
 {
-	Parallelogram test(1,2);
-	test.Getarea();
-	test.show_area();
-
+	Rectangle test(1,2);
+	test.area();
+	test.print();
 
 };
