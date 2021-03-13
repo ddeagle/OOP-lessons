@@ -110,6 +110,50 @@ public:
 	std::string getColor() const { return m_color; }
 };
 
+//3
+class Card
+{
+private:
+public:
+};
+
+class Hand : public Card
+{
+private:
+public:
+};
+
+class Deck : public Hand
+{
+private:
+public:
+};
+
+class GenericPlayer : public Hand
+{
+private:
+public:
+};
+
+class Player : public GenericPlayer
+{
+private:
+public:
+};
+
+class House : public GenericPlayer
+{
+private:
+public:
+};
+
+class Game
+{
+private:
+public:
+};
+
+
 
 
 

@@ -61,23 +61,14 @@ public:
 class RGBA
 {
 private:
-	std::int8_t m_red;
-	std::int8_t m_green;
-	std::int8_t m_blue;
-	std::int8_t m_alpha;
+	uint8_t m_red = 0;
+	uint8_t m_green = 0;
+	uint8_t m_blue = 0;
+	uint8_t m_alpha = 255;
 public:
-	RGBA()
-	{
-		std::int8_t m_red = 0;
-		std::int8_t m_green = 0;
-		std::int8_t m_blue = 0;
-		std::int8_t m_alpha = 255;
-	}
-
-	RGBA(int8_t color1, int8_t color2, int8_t color3, int8_t color4)
-		: m_red(color1), m_green(color2), m_blue(color3), m_alpha(color4)
-	{
-	}
+	RGBA(){}
+	RGBA(uint8_t color1, uint8_t color2, uint8_t color3, uint8_t color4)
+		: m_red(color1), m_green(color2), m_blue(color3), m_alpha(color4){}
 	
 	void print()
 	{
@@ -173,9 +164,7 @@ int main()
 	Power one(2, 3);
 	one.print_1();
 	one.calculate();
-//	Power two(double a,double b);
-//	two.set(1, 2);
-//	two.calculate();
+
 	
 	//2
 	RGBA test;
@@ -189,15 +178,12 @@ int main()
 //	Stack stack;
 //	stack.reset();
 //	stack.print_array();
-//
 //	stack.push(3);
 //	stack.push(7);
 //	stack.push(5);
 //	stack.print_array();
-//
 //	stack.pop();
 //	stack.print_array();
-//
 //	stack.pop();
 //	stack.pop();
 //	stack.print_array();
