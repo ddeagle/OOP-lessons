@@ -145,7 +145,8 @@ int main()
 {
 	//1
 	cout << "task 1" << endl;
-	Circle c1(5);
+	Circle c1(2);
+	Circle c2(10);
 
 	
 

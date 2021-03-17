@@ -1,5 +1,22 @@
 ﻿  Source.cpp
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(65,16): error C2664: "Parallelogram::Parallelogram(Parallelogram &&)": невозможно преобразовать аргумент 1 из "int" в "const Parallelogram &"
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(65,16): message : Причина: невозможно преобразовать "int" в "const Parallelogram"
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(65,16): message : Ни один конструктор не смог принять исходный тип, либо разрешение перегрузки конструктора неоднозначно
-I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(28,1): message : см. объявление "Parallelogram::Parallelogram"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(54,41): error C2661: Parallelogram::Parallelogram: нет перегруженной функции, принимающей 2 аргументов
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(65,34): error C2661: Parallelogram::Parallelogram: нет перегруженной функции, принимающей 2 аргументов
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(76,24): error C2664: "Parallelogram::Parallelogram(Parallelogram &&)": невозможно преобразовать аргумент 1 из "double" в "const Parallelogram &"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(76,24): message : Причина: невозможно преобразовать "double" в "const Parallelogram"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(76,24): message : Ни один конструктор не смог принять исходный тип, либо разрешение перегрузки конструктора неоднозначно
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(34,1): message : см. объявление "Parallelogram::Parallelogram"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(148,9): error C2259: "Circle": невозможно создать экземпляр абстрактного класса
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(36): message : см. объявление "Circle"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(148,9): message : из-за следующих членов:
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(148,9): message : double Figure::area(void) const: абстрактный
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(11): message : см. объявление "Figure::area"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(148,11): error C2259: "Circle": невозможно создать экземпляр абстрактного класса
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(36): message : см. объявление "Circle"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(148,11): message : из-за следующих членов:
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(148,11): message : double Figure::area(void) const: абстрактный
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(11): message : см. объявление "Figure::area"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(149,9): error C2259: "Circle": невозможно создать экземпляр абстрактного класса
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(36): message : см. объявление "Circle"
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(149,9): message : из-за следующих членов:
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(149,9): message : double Figure::area(void) const: абстрактный
+I:\docs\GitHub\oop\OOP-lessons\3 lesson\dz3\Source.cpp(11): message : см. объявление "Figure::area"
