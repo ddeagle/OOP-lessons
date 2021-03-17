@@ -8,8 +8,11 @@ using namespace std;
 class card
 {
 protected:
-	enum m_cardsuit {};
-	enum m_cardvalue {};
+	enum m_cardsuit { clubs, hearts, diamonds, spades};
+	enum m_cardvalue 
+	{
+	 ACE=1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
+	};
 	bool m_isFaceUp;
 	int m_card;
 public:
@@ -28,7 +31,7 @@ public:
 class Hand
 {
 protected:
-	vector m_card;
+	vector(Card*) m_card;
 	
 public:
 	vector<Card*> m_Cards    // Коллекция карт.Хранит указатели на объекты типа Сard

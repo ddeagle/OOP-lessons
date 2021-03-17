@@ -104,7 +104,7 @@ public:
 	GrannySmith()
 	{
 		m_color = "green";
-		m_name = "GrannySmith";
+		m_name = "GrannySmith" + m_name;
 	}
 	std::string getName() const { return m_name; }
 	std::string getColor() const { return m_color; }

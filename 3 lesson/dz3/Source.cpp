@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -20,19 +21,29 @@ public:
 class Parallelogram : public Figure
 {
 protected:
-	int m_a;
-	int m_b;
+	double m_height;
+	double m_width;
+	double m_grad;
 public:
-	Parallelogram(){}
-	Parallelogram(int a, int b) : m_a(a), m_b(b){}
+	Parallelogram(double height, double width, double grad) : m_height(height), m_width(width),m_grad(grad){}
+	Parallelogram() {}
+	double area()
+	{
+		return m_height * m_width * sin(m_grad); 
+	}
 };
 
 class Circle : public Figure
 {
 private:
-	int m_a;
+	double m_radious;
 public:
-	Circle(int a) : m_a(a) {}
+	Circle(double radious) : m_radious(radious) {}
+
+	double area()
+	{
+		return m_radious * m_radious * 3.14;
+	}
 
 };
 
@@ -40,10 +51,10 @@ class Rectangle : public Parallelogram
 {
 
 public:
-	Rectangle(int a, int b) : Parallelogram(m_a, m_b) {}
+	Rectangle(double height, double width) : Parallelogram(m_height, m_width) {}
 	
 	double area() const override {
-		return m_a * m_b;
+		return m_height * m_width;
 	}
 };
 
@@ -51,10 +62,10 @@ class Romb : public Parallelogram
 {
 
 public:
-	Romb(int a, int b) : Parallelogram(m_a, m_b) {}
+	Romb(double height,double grad) : Parallelogram(m_height, m_grad ) {}
 
 	double area() const override {
-		return m_a * m_b;
+		return pow(m_height,2) * sin(m_grad);
 	}
 };
 
@@ -62,10 +73,10 @@ class Square : public Parallelogram
 {
 
 public:
-	Square(int a) : Parallelogram(m_a) {}
+	Square(double height) : Parallelogram(m_height) {}
 
 	double area() const override {
-		return m_a * m_a;
+		return m_height * m_height;
 	}
 };
 
@@ -95,7 +106,7 @@ public:
 	}
 };
 
-class PassengerCar :public Car
+class PassengerCar :virtual public Car
 {
 	public:
 		PassengerCar(string model,string company) : Car(model, company)
@@ -103,7 +114,7 @@ class PassengerCar :public Car
 		
 };
 
-class Bus :public Car
+class Bus :virtual public Car
 {
 public:
 	Bus(string model, string company) : Car(model, company)
@@ -132,10 +143,11 @@ public:
 
 int main()
 {
-	Rectangle test(2,2);
-	test.print();
-	test.area();
-	test.print();
+	//1
+	cout << "task 1" << endl;
+	Circle c1(5);
+
+	
 
 
 };
